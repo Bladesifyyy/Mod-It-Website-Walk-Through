@@ -1,0 +1,316 @@
+* {
+    box-sizing: border-box;  /* source created by bladesify */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;  /* change fonts here */
+    line-height: 1.5;
+    background-color: #535353;
+    animation: background-animation 10s ease-in-out infinite;
+}
+
+@keyframes background-animation {
+    0% {background-image: linear-gradient(120deg, #9b0f9b 0%, #ebedee 50%, #fdfbfb 100%);}
+    50% {background-image: linear-gradient(120deg, #ebedee 0%, #680e68 50%, #ebedee 100%);}    /* dont touch this*/
+    100% {background-image: linear-gradient(120deg, #fdfbfd 0%, #ebedee 50%, #e100ff 100%);}
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    background-color: #333;
+    color: #c4b5ca;
+    padding: 1rem;          /* header of site colors */
+    text-align: center;
+}
+
+header .logo-text {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: title-pulse 2s infinite;         /* title animation */
+    border: 1px solid #c4b5ca;          /* color of border around title */
+    padding: 0 0.5rem;
+}
+
+.slogan {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+    font-weight: bold;
+    animation: slogan-pulse 2s infinite;        /* slogan animation you can turn it off or change it same with all the other animations i added */
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav li {
+    margin: 0 1rem;
+}
+
+.section-a {
+    background-color: #c4b5ca;
+    color: #fff8f8;
+}
+
+.section-b {
+    background-color: #2b2a2a;
+    color: #c4b5ca;                     /* change the them of site with section b & a */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.feature-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature-list li {
+    width: 30%;
+    margin: 1rem;
+}
+
+.feature-list h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.feature-list p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background-color: #c4b5ca;          /* color of button */
+    color: #fff;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    margin-right: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #f25858;       /* color of button on hover*/
+}
+
+.button:hover:before {
+    opacity: 0.2;
+}
+
+.button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover, .button:focus {
+    animation: pulse 2s infinite;
+}
+
+.discord-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background-color: #c4b5ca;      /* color of button */
+    color: #fff;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    margin-right: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.discord-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.discord-button:hover {
+    background-color: #5865f2;               /* color of button on hover*/
+}
+
+.discord-button:hover:before {
+    opacity: 0.2;
+}
+
+.discord-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.discord-button:hover, .discord-button:focus {
+    animation: pulse 2s infinite;                       /* button animation */
+}
+
+.discord-icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url("MLogo.jpg");         /* i added a image icon on the discord download button you can use png jpg just change it */
+    background-size: contain;
+    margin-right: 1rem;
+}
+
+footer {
+    background-color: #c4b5ca;
+    color: #ffffff;
+    padding: 1rem;                                          /* edit footer here */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+}
+
+footer li {
+    margin: 0 1rem;
+}
+
+.nav-link {
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #c4b5ca;             /* color of buttons at top of the site */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.1);
+    }
+}
+
+@keyframes title-pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {                                                               /* or any of this stuff unless you know what to do*/
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slogan-pulse {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    header .logo-text {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }                                                       /* dont touch any of this*/
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .feature-list li {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .button {
+        margin-right: 0;
+    }
+}
